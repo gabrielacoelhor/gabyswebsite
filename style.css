@@ -119,6 +119,7 @@ nav ul li a:hover::after {
     padding: 100px 10%;
     min-height: 100vh;
     text-align: center;
+    align-content: center;
 }
 
 #favfilms h2 {
@@ -173,8 +174,10 @@ nav ul li a:hover::after {
 
 #favactors {
     background: linear-gradient(to bottom, #0e041e, #020438);
-    padding: 50px 0;
+    padding: 100px 10%;
+    min-height: 100vh;
     text-align: center;
+    align-content: center;
 }
 
 #favactors h2 {
