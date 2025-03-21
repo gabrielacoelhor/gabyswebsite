@@ -1,62 +1,60 @@
-* { /* Remove margens e preenchimentos padrão de todos os elementos e ajusta o box-sizing */
+* { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
-    scroll-behavior: smooth; /*pra deixar o deslizamento bonitinho*/
-}
+    scroll-behavior: smooth;
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-} /*fonte padrão do site*/
+} 
 
-#hero { /* Estiliza a seção principal (hero) */
-    position: relative; /*faz com que o elemento permaneça no seu lugar normal, eai eu poderia alterar usando left e right se eu quisesse*/
-    width: 100%; /* Ocupa toda a largura da tela */
-    height: 100vh; /* Ocupa 100% da altura da tela */
-    display: flex; /* Usa flexbox para alinhar conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto */
-    color: #fdeeebbe;/* Define a cor do texto como branco */
-    font-size: 2rem; /* Define o tamanho do texto */
-    font-weight: bold; /* Deixa o texto em negrito */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    color: #fdeeebbe;
+    font-size: 2rem; 
+    font-weight: bold; 
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to bottom, #4e163100, #420135), /* Degradê de cima para baixo */
-                url(https://wallpapercave.com/wp/wp8492303.jpg) center/cover no-repeat; /* Imagem de fundo centralizada e coberta */
+    background: linear-gradient(to bottom, #4e163100, #420135),
+                url(https://wallpapercave.com/wp/wp8492303.jpg) center/cover no-repeat; 
 }
 
 .content p {
     font-size: 1.2rem;
     color: #fdeeeb98;
-    max-width: 600px; /* Para não ficar muito largo */
-    margin-top: 10px; /* Espaço entre o título e o subtítulo */
-    font-weight: 300; /*largura da fonte*/
+    max-width: 600px; 
+    margin-top: 10px;
+    font-weight: 300;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 header {
-    position: sticky; /* Fica fixa depois da hero */
-    top: 0; /* Gruda no topo quando chega lá */
+    position: sticky;
+    top: 0; 
     width: 100%;
     height: 100px;
     background: #420135;
     display: flex;
     align-items: center;
-    justify-content: space-between; /*distribui os elementos ao máximo, colocando o primeiro elemento grudado na esquerda e o último grudado na direita, deixando o maior espaço possível entre eles.*/
-    padding: 0 40px; /*0 de padding no topo e na base (vertical) e 40px de padding nas laterais (horizontal).*/
+    justify-content: space-between;
+    padding: 0 40px;
     color: #fdeeeb;
     font-size: 1.2rem;
-    z-index: 10; /* faz com que a header fica em cima de tudo*/
+    z-index: 10;
 }
 
- /* Estilos da navegação */
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
 }
 
-nav ul li {  /* tem que colocar pq se nao na hora de fazer a linha em vez de ficar apena embaixo do texto ela vai ficar na header toda */
+nav ul li {
     position: relative;
 }
 
@@ -67,58 +65,51 @@ nav ul li a {
     transition: 0.3s;
 }
 
-/* Criando a linha animada */
 nav ul li a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -4px; /* Distância da linha em relação ao texto */
+    bottom: -4px;
     width: 0%;
     height: 2px;
     background: #b20992;
     transition: width 0.3s ease-in-out;
 }
 
-/* Mudar a cor do texto ao passar o mouse */
 nav ul li a:hover {
     color: #b20992;
 }
 
-/* Quando passa o mouse, a linha cresce da esquerda para a direita */
 nav ul li a:hover::after {
     width: 100%;
 }
 
-/* SEÇÃO ABOUT */
 #about {
     background: linear-gradient(to bottom, #420135, #1c0526);
     display: flex;
     align-items: center;
-    justify-content: space-around; /*Distribui os elementos horizontalmente com espaço igual antes, entre e depois deles.*/
-    padding: 100px 10%; /*Adiciona espaçamento interno*/
-    min-height: 100vh; /* permitir que ocupe a tela toda*/
+    justify-content: space-around;
+    padding: 100px 10%;
+    min-height: 100vh;
 }
 
-/* TÍTULO */
 .about-content h2 {
     color: #fdeeeb;
     font-size: 2.5rem;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* TEXTO */
 .about-content p {
     font-size: 1.2rem;
     color: #fdeeeb98;
-    max-width: 600px; /*Limita a largura do texto*/
+    max-width: 600px;
 }
 
-/* IMAGEM REDONDA COM SOMBRA */
 .about-img img {
     width: 300px;
-    height: 300px; /* width e esse definem largura e altura*/
-    object-fit: cover; /*pra imagem ficar certinha e nao ficar distorcida nem cortada*/
-    border-radius: 50%; /*tranforma em um circulo*/
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 50%; 
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -139,20 +130,19 @@ nav ul li a:hover::after {
 .favfilms-content p {
     font-size: 1.2rem;
     color: #fdeeeb98;
-    margin-bottom: 40px; /*espaço entre o paragrafo e o container*/
+    margin-bottom: 40px;
 }
 
 .films-container {
     display: flex;
-    gap: 20px; /*espaço entre os itens do container*/
-    overflow-x: auto; /* Garante a rolagem horizontal */
+    gap: 20px;
+    overflow-x: auto;
     padding-bottom: 10px;
     scrollbar-color: #e4d9e7 #facf7f00;
 }
 
-/* ESTILO DOS FILMES */
 .film {
-    flex: 0 0 auto; /* Impede que os itens redimensionem */
+    flex: 0 0 auto;
     text-align: center;
     padding: 10px;
 }
@@ -205,22 +195,22 @@ nav ul li a:hover::after {
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    scroll-snap-type: x mandatory; /*O scroll sempre "gruda" no próximo elemento de snap, sem deixar o usuário parar no meio.*/
+    scroll-snap-type: x mandatory;
     padding-bottom: 10px;
-    max-width: 90vw; /*largura maxima 90% da tela*/
+    max-width: 90vw;
     scrollbar-color: #e4d9e7 #facf7f00;
 }
 
 .actor-profile {
-    flex: 0 0 60%; /* O elemento ocupa no máximo 60% da largura do container pai e não cresce ou encolhe */
+    flex: 0 0 60%;
     display: flex;
     align-items: center;
     gap: 20px;
     background: linear-gradient(to right, #420135, #1c0526);
-    padding: 20px; /* Adiciona um espaçamento interno de 20px */
+    padding: 20px; 
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;  /* Faz com que o elemento "grude" na posição inicial ao usar scroll-snap */
+    scroll-snap-align: start;
 }
 
 .actor-profile img {
@@ -253,7 +243,6 @@ nav ul li a:hover::after {
     background: linear-gradient(to bottom, #020438, #3c3754);
     padding: 50px 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #contact h2 {
